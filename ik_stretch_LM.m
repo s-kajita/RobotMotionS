@@ -67,6 +67,8 @@ plot(SingularPoint*[1 1],ylim,'m-.')
 ylabel(' q [deg]')
 xlabel(' x [m]')
 
+return
+
 figure
 subplot(211)
 plot(xd_m,x_m,xd_m,xd_m,'r--')

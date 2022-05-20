@@ -1,4 +1,4 @@
-function SetJointAnkles(idx, q)
+function SetJointAngles(idx, q)
 global uLINK
 
 for n=1:length(idx)
