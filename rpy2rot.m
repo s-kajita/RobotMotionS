@@ -1,4 +1,13 @@
-function rot = rpy2rot(roll,pitch,yaw)
+function rot = rpy2rot(q,pitch,yaw)
+
+if nargin == 1
+    yaw = q(3);
+    pitch = q(2);
+    roll  = q(1);
+else
+    roll = q;
+end
+
 
 Cphi = cos(roll);  Sphi = sin(roll);
 Cthe = cos(pitch); Sthe = sin(pitch);
