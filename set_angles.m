@@ -1,6 +1,9 @@
 function set_angles(idx,q)
 global uLINK
 
+if nargin == 1
+    q = zeros(length(idx),1);
+end
 SetJointAngles(idx,q);
 
 clf
