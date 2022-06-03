@@ -1,16 +1,20 @@
 function set_angles(idx,q)
-global uLINK
+global uLINK AxisLimitInfo
 
 if nargin == 1
     q = zeros(length(idx),1);
 end
 SetJointAngles(idx,q);
 
+[az,el] = view;  % remember view angle
+
 clf
 DrawAllJoints(1);
-view(40,20)
+view(az,el)      % recover view angle
 axis equal
-xlim([-0.7 0.7])
-ylim([-0.7 0.7])
-zlim([0.0 1.2])
+if exist('AxisLimitInfo')
+    xlim(AxisLimitInfo.xl);
+    ylim(AxisLimitInfo.yl);
+    zlim(AxisLimitInfo.zl);
+end
 grid on

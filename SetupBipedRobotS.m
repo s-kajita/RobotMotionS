@@ -46,3 +46,9 @@ uLINK(BODY).w = [0 0 0]';
 for n=1:length(uLINK)
     uLINK(n).dq     = 0;            % joitn speed   [rad/s]
 end
+
+global AxisLimitInfo
+AxisLimitInfo.xl = [-0.7 0.7];
+AxisLimitInfo.yl = [-0.7 0.7];
+AxisLimitInfo.zl = [0.1 1.2];
+
