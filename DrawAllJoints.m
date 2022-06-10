@@ -19,8 +19,9 @@ if j ~= 0
     if i ~= 0
         Connect3D(uLINK(i).p,uLINK(j).p,'k',2);
     end
-    DrawCylinder(uLINK(j).p, uLINK(j).R * uLINK(j).a, radius,len, joint_col);
-    
+    if j ~= 1
+       DrawCylinder(uLINK(j).p, uLINK(j).R * uLINK(j).a, radius,len, joint_col);
+    end
     
     DrawAllJoints(uLINK(j).child);
     DrawAllJoints(uLINK(j).sister);

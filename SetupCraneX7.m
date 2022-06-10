@@ -32,7 +32,7 @@ for n=1:length(uLINK)
     eval([uLINK(n).name,'=',num2str(n),';']);
 end
 
-uLINK(BASE).p = [0.0, 0.0, 0.0]';
+uLINK(BASE).p = [0.0, 0.0, 0.05]';
 uLINK(BASE).R = eye(3);
 ForwardKinematics(1);
 
